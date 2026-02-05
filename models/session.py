@@ -3,7 +3,7 @@ Session and Intelligence Models
 """
 
 from pydantic import BaseModel, Field
-from typing import List, Optional, Dict
+from typing import List, Optional, Dict, Union
 from datetime import datetime
 
 
@@ -11,7 +11,7 @@ class MessageContent(BaseModel):
     """Message content structure"""
     sender: str
     text: str
-    timestamp: str
+    timestamp: Union[str, int]
 
 
 class MessageMetadata(BaseModel):
