@@ -25,7 +25,7 @@ class ConversationMessage(BaseModel):
     """Single message in conversation history"""
     sender: str
     text: str
-    timestamp: str
+    timestamp: Union[str, int]  # Accept both string and integer timestamps
 
 
 class MessageRequest(BaseModel):
